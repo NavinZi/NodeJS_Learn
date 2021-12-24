@@ -31,16 +31,11 @@
 // EXPRESS JS //
 
 const express = require('express')
-const path = require('path')
-const indexPage = path.join(__dirname,'index.html')
+const router = require('./routes/route.js');
 const app = express()
 const port = 8888
 
-app.use('/Welcome',(req,res)=>{
-    res.status(200)
-    res.type('text/html')
-    res.sendFile(indexPage)
-})
+app.use(router)
 app.listen(port,()=>{
     console.log(`Server Started on port ${port}`);
 })
