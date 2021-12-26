@@ -5,13 +5,13 @@ const router = express.Router()
 router.get('/home',(req,res)=>{
     res.status(200)
     res.type('text/html')
-    res.sendFile(path.join(__dirname,'../views/index.html'))
+    res.sendFile(path.join(__dirname,'../public/index.html'))
 })
 
 router.get('/Register',(req,res)=>{
     res.status(200)
     res.type('text/html')
-    res.sendFile(path.join(__dirname,'../views/Register.html'))
+    res.sendFile(path.join(__dirname,'../public/Register.html'))
 })
 
 module.exports = router

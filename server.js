@@ -33,8 +33,10 @@
 const express = require('express')
 const router = require('./routes/route.js');
 const app = express()
+const path = require('path')
 const port = 8888
 
+//app.use(express.static(path.join(__dirname,'public')))
 app.use(router)
 app.listen(port,()=>{
     console.log(`Server Started on port ${port}`);
