@@ -13,7 +13,7 @@ router.get('/Register',(req,res)=>{
     // res.status(200)
     // res.type('text/html')
     // res.sendFile(path.join(__dirname,'../public/Register.html'))
-    res.render('Register2.ejs')
+    res.render('Register2.ejs',{message:"success"})
 })
 
 module.exports = router

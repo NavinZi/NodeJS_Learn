@@ -39,7 +39,7 @@ const port = 8888
 //app.use(express.static(path.join(__dirname,'public')))
 app.set('views',path.join(__dirname,'views'))
 app.set('view engine','ejs')
-app.use('/public', express.static('public')); //Call css files
+app.use('/public', express.static('public')); //Call css and image files
 app.use(router)
 app.listen(port,()=>{
     console.log(`Server Started on port ${port}`);
