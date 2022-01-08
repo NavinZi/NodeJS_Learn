@@ -6,152 +6,119 @@
   <meta name="author" content="Navin" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <!-- Bootstrap Default-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
   <!--Bootstrap Icons-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
   <!--My css-->
-  <link rel="stylesheet" type="text/css" href="/public/assets/style.css"/>
+  <link rel="stylesheet" type="text/css" href="/public/assets/css/style.css"/>
   <!-- Thai Style Font-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
   <!-- add icon link -->
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4827/4827263.png" type="image/x-icon">
+  <link rel="icon" href="/public/assets/image/Sigma_Logo.svg" type="image/x-icon">
   <title>Sigma Class Tutor</title>
+
 </head>
 
 <body style="background-color:aliceblue;">
   <!--Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin="anonymous"></script>
-  <!----------------->
-  <header style="color: white; background-color:lightseagreen">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark fixed-top">
-      <div class="container-fluid" style="padding-left: 8%; padding-right: 3%;">
-        <a class="navbar-brand" href="#"><img src="./Sigma_Logo.svg" width="70px" height="70px"></a>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0" style="font-family: 'Mitr', sans-serif; font-size: 18px;">
-            <li class="nav-item">
-              <a href="./home" class="nav-link px-2 text-white HoverAnim" onclick="HomeSC_ShowAlert()">หน้าแรก</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-white HoverAnim " onclick="CourseSC_Showalert()">คอร์สเรียน</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-white HoverAnim " onclick="TutorInfoSC_Showalert()">ข้อมูลผู้สอน</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-white HoverAnim " onclick="ContactSC_Showalert()">ติดต่อเรา</a>
-            </li>
-          </ul>
-          <form class="col-12 col-lg-2 mb-3 mb-lg-0 me-lg-3">
-            <input class="form-control" type="search" placeholder="ค้นหา..." aria-label="Search">
-          </form>
-          <div class="text-start" style="font-family: 'Mitr'">
-            <button type="button" class="btn btn-outline-light me-2">เข้าสู่ระบบ</button>
-            <a href="./Register"><button type="button" class="btn btn-warning">สมัครเรียน</button></a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <!------------------------------------------------>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  <!--Navbar-->
+  <%- include('navbar.ejs') %> 
 
-  <div class="container d-flex justify-content-center px-5">
+  <!--<div class="alert alert-danger">กรุณาใส่ข้อมูลให้ครบถ้วน</div>
+  <div class="alert alert-success">สมัครสมาชิกสำเร็จ</div>-->
+
+  <div class="container justify-content-center px-5">
     <div class="row register-form">
-      <h1 class="h3 fw-normal" style="margin-top: 30px;">Registration</h1>
-      <div class="col-6">
-        <form>
-          <div class="form-floating">
-            <input type="name" class="form-control" id="floatingInput" placeholder="Name">
-            <label for="floatingInput">Name</label>
+      <h1 class="h3 fw-normal mb-3" style="margin-top: 30px;">Registration</h1>
+      <form method="post">
+        
+        <% if (message == "invalid") { %>
+          <div class="alert alert-danger">กรุณาใส่ข้อมูลให้ครบถ้วน</div>
+        <% } else if (message == "success") { %>
+          <div class="alert alert-success">สมัครสมาชิกสำเร็จ</div>
+        <% } %> 
+        
+        <div class="row mb-3">
+          <div class="col-6">
+            <input type="text" class="form-control" name="firstname" placeholder="Name">
           </div>
-  
-          <div class="form-floating mt-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+          <div class="col-6">
+            <input type="text" class="form-control" name="surname" placeholder="Surname">
           </div>
-        </form>
-      </div>
-
-      <div class="col-6">
-        <form>
-
-          <div class="form-floating">
-            <input type="name" class="form-control" id="floatingInput" placeholder="Name">
-            <label for="floatingInput">Surname</label>
-          </div>
-  
-          <div class="form-floating mt-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Phone Number</label>
-          </div>
-
-        </form>
-      </div>
-      <div>
-        <div class="form-floating mt-3">
-          <input type="name" class="form-control" id="floatingInput" placeholder="Name">
-          <label for="floatingInput">Address</label>
         </div>
-      </div>
-
-        <div class="col-lg-6 col-md-6 mt-3">
-          <h8 class="fw-normal">Course</h3>
-            <select class="form-select" aria-label="Course Select">
-              <option selected style="color:lightgray;">Open to select course</option>
-              <option value="1">Course: Math Booster</option>
-              <option value="2">Course: Physic Booster</option>
-              <option value="3">Special Course: Engineer Workshop</option>
-            </select>
+        <div class="row mb-3">
+          <div class="col-6">
+            <input type="text" class="form-control" name="email" placeholder="Email Address">
+          </div>
+          <div class="col-6">
+            <input type="text" class="form-control" name="phone" placeholder="Phone">
+          </div>
         </div>
 
+        <div class="row mb-3">
+          <div class="col-6">
+            <input type="password" class="form-control" name="password" placeholder="Password">
+          </div>
+          <div class="col-6">
+            <input type="password" class="form-control" name="passwordverify" placeholder="Confirm Password">
+          </div>
+        </div>
 
+        <div class="col mb-3">
+          <textarea class="form-control" name="address" placeholder="Address" rows="3"></textarea>
+        </div>
+        <div class="col">
+          <input type="checkbox" id="check1" name="Course[]" value="Math Booster" />
+          <label for="check1">Course: Math Booster</label>
+        </div>
+        <div class="col">
+          <input type="checkbox" id="check2" name="Course[]" value="Physic Booster" />
+          <label for="check1">Course: Physic Booster</label>
+        </div>
+        <div class="col">
+          <input type="checkbox" id="check3" name="Course[]" value="Engineering Workshop" />
+          <label for="check1">Course: Engineering Workshop</label>
+        </div>
+
+        <div class="col mt-3">
+          <input type="submit" class="btn btn-primary" name="submit" value="ยืนยัน" style="color:white; background-color:lightseagreen; border:none">
+        </div>
+      </form>
     </div>
   </div>
-<!--Insert Space-->
-<div style="height: 800px;">
-
-</div>
-
-<!-- FOOTER -->
-<div style="background-color:lightseagreen">
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-      <div class="col-lg-4 d-flex align-items-center">
-        <span class="text-light">© Sigma Class Company, Inc</span>
-      </div>
-
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-dark" href="https://www.facebook.com/" target="_blank"
-            rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white"
-              class="bi bi-facebook" viewBox="0 0 16 16">
-              <path
-                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-              <use xlink:href="#facebook"></use>
-            </svg></a></li>
-        <li class="ms-3"><a class="text-dark " href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-              fill="white" class="bi bi-line" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0zM5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.154.154 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157zm.791-2.924h.562c.086 0 .155.07.155.156v3.486c0 .086-.07.155-.155.155h-.562a.156.156 0 0 1-.156-.155V4.918c0-.086.07-.156.156-.156zm3.863 0h.56c.087 0 .157.07.157.156v3.486c0 .086-.07.155-.156.155h-.561a.155.155 0 0 1-.04-.005h-.002a.168.168 0 0 1-.011-.004l-.005-.002-.007-.003a.066.066 0 0 1-.008-.004L9.6 8.54l-.01-.006-.001-.001a.154.154 0 0 1-.04-.039l-1.6-2.16v2.07a.155.155 0 0 1-.155.156h-.561a.156.156 0 0 1-.156-.155V4.918c0-.086.07-.156.156-.156H7.8l.005.001h.006l.003.001h.006l.01.003h.002l.002.001.01.003.005.002a.09.09 0 0 1 .009.004l.003.001.002.001a.113.113 0 0 1 .013.008l.003.002.005.003v.001c.002 0 .003.002.004.003a.092.092 0 0 1 .008.006l.003.003a.17.17 0 0 1 .023.026L9.52 6.99V4.918c0-.086.07-.156.156-.156zm3.815.717c0 .086-.07.156-.155.156H11.81v.59h1.525c.086 0 .155.07.155.155v.561c0 .086-.07.156-.155.156H11.81v.59h1.525c.086 0 .155.07.155.155v.561c0 .086-.07.156-.155.156h-2.242a.155.155 0 0 1-.11-.045l-.002-.003a.155.155 0 0 1-.044-.107V4.918c0-.042.017-.08.043-.107l.003-.003.001-.001a.155.155 0 0 1 .109-.045h2.242c.086 0 .155.07.155.156v.561z" />
-            </svg>
-            <use xlink:href="#Line"></use>
-            </svg>
-          </a></li>
-      </ul>
-    </footer>
   </div>
-</div>
+  <!--Insert Space-->
+  <div style="height: 800px;">
+
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background-color:lightseagreen">
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-lg-4 d-flex align-items-center">
+          <span class="text-light">© Sigma Class Company, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-dark" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="text-dark " href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-line" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0zM5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.154.154 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157zm.791-2.924h.562c.086 0 .155.07.155.156v3.486c0 .086-.07.155-.155.155h-.562a.156.156 0 0 1-.156-.155V4.918c0-.086.07-.156.156-.156zm3.863 0h.56c.087 0 .157.07.157.156v3.486c0 .086-.07.155-.156.155h-.561a.155.155 0 0 1-.04-.005h-.002a.168.168 0 0 1-.011-.004l-.005-.002-.007-.003a.066.066 0 0 1-.008-.004L9.6 8.54l-.01-.006-.001-.001a.154.154 0 0 1-.04-.039l-1.6-2.16v2.07a.155.155 0 0 1-.155.156h-.561a.156.156 0 0 1-.156-.155V4.918c0-.086.07-.156.156-.156H7.8l.005.001h.006l.003.001h.006l.01.003h.002l.002.001.01.003.005.002a.09.09 0 0 1 .009.004l.003.001.002.001a.113.113 0 0 1 .013.008l.003.002.005.003v.001c.002 0 .003.002.004.003a.092.092 0 0 1 .008.006l.003.003a.17.17 0 0 1 .023.026L9.52 6.99V4.918c0-.086.07-.156.156-.156zm3.815.717c0 .086-.07.156-.155.156H11.81v.59h1.525c.086 0 .155.07.155.155v.561c0 .086-.07.156-.155.156H11.81v.59h1.525c.086 0 .155.07.155.155v.561c0 .086-.07.156-.155.156h-2.242a.155.155 0 0 1-.11-.045l-.002-.003a.155.155 0 0 1-.044-.107V4.918c0-.042.017-.08.043-.107l.003-.003.001-.001a.155.155 0 0 1 .109-.045h2.242c.086 0 .155.07.155.156v.561z" />
+              </svg>
+              <use xlink:href="#Line"></use>
+              </svg>
+            </a></li>
+        </ul>
+      </footer>
+    </div>
+  </div>
 
 
 </body>

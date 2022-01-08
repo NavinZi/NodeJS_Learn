@@ -29,66 +29,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
     crossorigin="anonymous"></script>
-  <!----------------->
-
-  <header style="color: white; background-color:lightseagreen">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark fixed-top">
-      <div class="container-fluid" style="padding-left: 8%; padding-right: 3%;">
-        <a class="navbar-brand" href="#"><img src="/public/assets/image/Sigma_Logo.svg" width="70px" height="70px"></a>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0" style="font-family: 'Mitr', sans-serif; font-size: 18px;">
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-white HoverAnim" onclick="HomeSC_ShowAlert()">หน้าแรก</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-white HoverAnim " onclick="CourseSC_Showalert()">คอร์สเรียน</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-white HoverAnim " onclick="TutorInfoSC_Showalert()">ข้อมูลผู้สอน</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link px-2 text-white HoverAnim " onclick="ContactSC_Showalert()">ติดต่อเรา</a>
-            </li>
-          </ul>
-          <form class="col-12 col-lg-2 mb-3 mb-lg-0 me-lg-3">
-            <input class="form-control" type="search" placeholder="ค้นหา..." aria-label="Search">
-          </form>
-          <div class="text-start" style="font-family: 'Mitr'">
-            <button type="button" class="btn btn-outline-light me-2">เข้าสู่ระบบ</button>
-            <a href="./Register"><button type="button" class="btn btn-warning">สมัครเรียน</button></a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-
-
-        <img src="https://cdn-icons-png.flaticon.com/512/786/786963.png" width="50px" height="50px">
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
-          style="font-family: 'Mitr', sans-serif; font-size: 18px;">
-          <li><a href="#" class="nav-link px-2 text-white HoverAnim" onclick="HomeSC_ShowAlert()">หน้าแรก</a></li>
-          <li><a href="#" class="nav-link px-2 text-white HoverAnim" onclick="CourseSC_Showalert()">คอร์สเรียน</a></li>
-          <li><a href="#" class="nav-link px-2 text-white HoverAnim" onclick="TutorInfoSC_Showalert()">ข้อมูลผู้สอน</a></li>
-          <li><a href="#" class="nav-link px-2 text-white HoverAnim" onclick="ContactSC_Showalert()">ติดต่อเรา</a></li>
-        </ul>
-
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="ค้นหา..." aria-label="Search">
-        </form>
-
-        <div class="text-end" style="font-family: 'Mitr'">
-          <button type="button" class="btn btn-outline-light me-2">เข้าสู่ระบบ</button>
-          <button type="button" class="btn btn-warning">สมัครเรียน</button>
-        </div>
-      </div>
-    </div> -->
-  </header>
+  <!--Navbar-->
+  <%- include('navbar.ejs') %> 
   <!-- Carousel -->
   <div class="container-fullwidth">
     <div style="background-color:white; margin-bottom: 50px;">
